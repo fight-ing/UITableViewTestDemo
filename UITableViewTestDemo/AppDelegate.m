@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import "TestForTableViewVC.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -15,9 +16,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    RootViewController *rvc = [[RootViewController alloc] init];
-    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:rvc];
-    self.window.rootViewController = nvc;
+//    RootViewController *rvc = [[RootViewController alloc] init];
+//    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:rvc];
+//    self.window.rootViewController = nvc;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    TestForTableViewVC *tvc = (TestForTableViewVC *)[mainStoryBoard instantiateViewControllerWithIdentifier:@"TestForTableViewVC"];
+    self.window.rootViewController = tvc;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
