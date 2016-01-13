@@ -44,7 +44,7 @@
         [_dataArray addObject:array];
     }
     
-    _testTableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 100, self.view.frame.size.width-20, self.view.frame.size.height-80) style:UITableViewStyleGrouped];
+    _testTableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width-20, self.view.frame.size.height) style:UITableViewStyleGrouped];
     _testTableView.delegate = self;
     _testTableView.dataSource = self;
     _testTableView.alwaysBounceHorizontal = NO;
